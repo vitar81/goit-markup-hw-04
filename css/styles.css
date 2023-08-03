@@ -406,6 +406,7 @@ address {
   justify-content: center;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #8e8f99;
 }
 
 .clients-main-top:hover {
@@ -415,6 +416,10 @@ address {
 .clients-main-top:focus {
   color: #404bbf;
   border-color: #404bbf;
+}
+
+.clients-main-icon {
+  fill: currentColor;
 }
 
 /*----------------PORTFOLIO---------------*/
@@ -453,13 +458,29 @@ address {
   color: #fff;
   background-color: #404bbf;
   border: 1px solid transparent;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
-/*---hmm*/
+
 .service-card-list {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+}
+
+.service-link-text {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-link-text:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.service-link-text:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .container-cover-wrap {
@@ -478,11 +499,27 @@ address {
   transform: translateY(100%);
 }
 
-.cover-text {
+.cover-text-paragraf {
   color: var(--cloud, #f4f4fd);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  position: absolute;
+  top: 0;
+  padding: 40px 32px;
+  background-color: var(--color-iris);
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-link-text:hover .cover-text-paragraf {
+  transform: translateY(0%);
+}
+
+.service-link-text:focus .cover-text-paragraf {
+  transform: translateY(0%);
 }
 
 .container-service-menu {
@@ -495,6 +532,17 @@ address {
   width: calc((100% - 48px) / 3);
   border-bottom: 1px solid var(--cornflower, #e7e9fc);
   position: relative;
+  display: block;
+}
+
+.service-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.service-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .service-item:hover .container-cover {
@@ -591,6 +639,18 @@ address {
   background: var(--iris, #4d5ae5);
 }
 
+.footer-icons:hover {
+  background-color: #31d0aa;
+}
+
+.footer-icons:focus {
+  background-color: #31d0aa;
+}
+
+.social-icon {
+  fill: var(--color-cloud);
+}
+
 /*--------------MODAL WINDOW-------------*/
 
 .backdrop {
@@ -614,7 +674,7 @@ address {
   width: 408px;
   min-height: 584px;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   border-radius: 4px;
