@@ -311,7 +311,11 @@ address {
   padding: 32px 0;
 }
 
-.container-team-top {
+.container-team-icon {
+  fill: #f4f4fd;
+}
+
+.icon-social {
   width: 40px;
   height: 40px;
   display: flex;
@@ -319,6 +323,11 @@ address {
   justify-content: center;
   border-radius: 50%;
   background: var(--iris, #4d5ae5);
+}
+
+.icon-social:hover,
+.icon-social:focus {
+  background-color: #404bbf;
 }
 
 .team-social {
@@ -488,37 +497,28 @@ address {
   overflow: hidden;
 }
 
-.container-cover {
-  position: absolute;
-  top: 0;
-  background: var(--iris, #4d5ae5);
-  height: 100%;
-  padding: 0 32px;
-  display: flex;
-  align-items: center;
-  transform: translateY(100%);
-}
-
-.cover-text-paragraf {
+.cover-text {
   color: var(--cloud, #f4f4fd);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 0;
   padding: 40px 32px;
-  background-color: var(--color-iris);
+  background: var(--iris, #4d5ae5);
   height: 100%;
   width: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.service-link-text:hover .cover-text-paragraf {
+.service-link-text:hover .cover-text {
   transform: translateY(0%);
 }
 
-.service-link-text:focus .cover-text-paragraf {
+.service-link-text:focus .cover-text {
   transform: translateY(0%);
 }
 
@@ -637,6 +637,7 @@ address {
   justify-content: center;
   border-radius: 50%;
   background: var(--iris, #4d5ae5);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icons:hover {
@@ -648,7 +649,7 @@ address {
 }
 
 .social-icon {
-  fill: var(--color-cloud);
+  fill: #f4f4fd;
 }
 
 /*--------------MODAL WINDOW-------------*/
