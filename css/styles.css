@@ -323,6 +323,7 @@ address {
   justify-content: center;
   border-radius: 50%;
   background: var(--iris, #4d5ae5);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-social:hover,
@@ -459,7 +460,8 @@ address {
   border: 1px solid var(--cornflower, #e7e9fc);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-button:hover,
